@@ -1,0 +1,209 @@
+﻿
+<!doctype html>
+<html>
+<head>
+	<title>@ViewBag.Title</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="../../Content/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="../../Scripts/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/main.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/bootstrap-modal.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="navbar navbar-fixed-top m-header">
+		<div class="navbar-inner m-inner">
+			<div class="container-fluid">
+				<a class="brand m-brand" href="index.html">Scheduler</a>
+		        
+				<div class="nav-collapse collapse">
+
+					<div class="btn-group pull-right">
+				        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+			          		<i class="icon-user"></i> @ViewBag.Fullname
+			          		<span class="caret"></span>
+				        </a>
+				        <ul class="dropdown-menu">
+			          		<li><a href="#"><i class="icon-user"></i>Profile</a></li>
+			          		<li><a href="#"><i class="icon-cog"></i>Settings</a></li>
+	 		 				<li class="divider"></li>
+			          		<li><a href="#"><form class="form-horizontal" action="/Home/Logout" method="POST"><button type="submit" class="btn btn-danger"><i class="icon-off"></i>Logout</button></form></a></li>
+				        </ul>
+			      	</div>
+	          	</div>
+			</div>
+		</div>
+	</div>
+	<div class="m-top"></div>
+	<aside class="sidebar">
+		<ul class="nav nav-tabs nav-stacked">
+			<li class="active">
+				<a href="index.html">
+					<div>
+						<div class="ico">
+							<img src="../../Content/img/ico/ico-home.png" />
+						</div>
+						<div class="title">
+							Home
+						</div>
+					</div>
+
+					<div class="arrow">
+						<div class="bubble-arrow-border"></div>
+						<div class="bubble-arrow"></div>
+					</div>
+				</a>
+			</li>
+
+			<li class="">
+				<a href="notification.html">
+					<div>
+						<div class="ico">
+							<img src="../../Content/img/ico/ico-notification.gif">
+						</div>
+						<div class="title">
+							Notification
+						</div>
+					</div>
+
+					<div class="arrow">
+						<div class="bubble-arrow-border"></div>
+						<div class="bubble-arrow"></div>
+					</div>
+				</a>
+			</li>
+
+			<li class="">
+				<a href="form.html">
+					<div>
+						<div class="ico">
+							<img src="../../Content/img/ico/ico-setting.gif">
+						</div>
+						<div class="title">
+							Setting
+						</div>
+					</div>
+					<div class="arrow">
+						<div class="bubble-arrow-border"></div>
+						<div class="bubble-arrow"></div>
+					</div>
+				</a>
+			</li>
+
+			<li class="">
+				<a href="order.html">
+					<div>
+						<div class="ico">
+							<img src="../../Content/img/ico/ico-order.gif">
+						</div>
+						<div class="title">
+							Order
+						</div>
+					</div>
+					<div class="arrow">
+						<div class="bubble-arrow-border"></div>
+						<div class="bubble-arrow"></div>
+					</div>
+				</a>
+			</li>
+
+			<li class="">
+				<a href="media.html">
+					<div>
+						<div class="ico">
+							<img src="../../Content/img/ico/ico-media.gif">
+						</div>
+						<div class="title">
+							Media
+						</div>
+					</div>
+					<div class="arrow">
+						<div class="bubble-arrow-border"></div>
+						<div class="bubble-arrow"></div>
+					</div>
+				</a>
+			</li>
+
+			<li class="">
+				<a href="help.html">
+					<div>
+						<div class="ico">
+							<img src="../../Content/img/ico/ico-help.gif">
+						</div>
+						<div class="title">
+							Help
+						</div>
+					</div>
+					<div class="arrow">
+						<div class="bubble-arrow-border"></div>
+						<div class="bubble-arrow"></div>
+					</div>
+				</a>
+			</li>
+
+			<li class="">
+				<a href="#more">
+					<div>
+						<div class="ico">
+							<img src="../../Content/img/ico/ico-user.gif">
+						</div>
+						<div class="title">
+							User
+						</div>
+					</div>
+					<div class="arrow">
+						<div class="bubble-arrow-border"></div>
+						<div class="bubble-arrow"></div>
+					</div>
+				</a>
+			</li>
+
+			<li class="">
+				<a href="#more">
+					<div>
+						<div class="ico">
+							<img src="../../Content/img/ico/ico-report.gif">
+						</div>
+						<div class="title">
+							Report
+						</div>
+					</div>
+					<div class="arrow">
+						<div class="bubble-arrow-border"></div>
+						<div class="bubble-arrow"></div>
+					</div>
+				</a>
+			</li>
+
+			<li class="">
+				<a href="#" id="btn-more">
+					<div>
+						<div class="ico">
+							<img src="../../Content/img/ico/ico-more.png">
+						</div>
+						<div class="title">
+							More
+						</div>
+					</div>
+				</a>
+
+			</li>
+	    </ul>
+	</aside>
+	<div class="m-sidebar-collapsed">
+		<ul class="nav nav-pills">
+			
+		</ul>
+
+		<div class="arrow-border">
+			<div class="arrow-inner"></div>
+		</div>
+	</div>
+	<div class="main-container">
+		@RenderBody()
+	</div>
+</body>
+</html>
